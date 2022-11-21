@@ -7,6 +7,7 @@ from users.views import (
     LogIn,
     LogOut,
     GithubLogIn,
+    KakaoLogIn,
 )
 
 urlpatterns = [
@@ -15,6 +16,7 @@ urlpatterns = [
     path("change-password/", ChangePassword.as_view()),
     path("log-in/", LogIn.as_view()),
     path("log-out/", LogOut.as_view()),
-    path("github", GithubLogIn.as_view()),
+    path("github/", GithubLogIn.as_view()),
+    path("kakao/", KakaoLogIn.as_view()),
     path("@<str:username>/", PublicUser.as_view()),
 ]
