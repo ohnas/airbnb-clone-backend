@@ -8,6 +8,7 @@ from rooms.views import (
     RoomAmenities,
     RoomPhotos,
     RoomBookings,
+    RoomBookingCheck,
 )
 
 
@@ -18,6 +19,7 @@ urlpatterns = [
     path("<int:pk>/amenities", RoomAmenities.as_view()),
     path("<int:pk>/photos", RoomPhotos.as_view()),
     path("<int:pk>/bookings", RoomBookings.as_view()),
+    path("<int:pk>/bookings/check", RoomBookingCheck.as_view()),
     path("amenities/", Amenities.as_view()),
     path("amenities/<int:pk>/", AmenityDetail.as_view()),
 ]
